@@ -4,9 +4,9 @@ import pandas as pd
 
 # Create a sample dataset for experimental results
 data = {
-    'Experiment': ['Experiment 1', 'Experiment 1', 'Experiment 2', 'Experiment 2'],
-    'Result': [10, 20, 30, 40],
-    'Category': ['A', 'B', 'A', 'B']
+    'Experiment': ['Experiment 1', 'Experiment 1', 'Experiment 1', 'Experiment 1'],
+    'Frequency': [10, 20, 30, 40],
+    'Current': [50, 60, 70, 80]
 }
 
 df = pd.DataFrame(data)
@@ -22,7 +22,7 @@ selected_experiment = st.selectbox("Select Experiment", experiments)
 filtered_df = df[df['Experiment'] == selected_experiment]
 
 # Create a Plotly graph
-fig = px.bar(filtered_df, x='Category', y='Result')
+fig = px.line(filtered_df, x='Current', y='Frequency')
 
 # Display the graph
-st.plotly_chart(fig)
+st.plotly_line(fig)
