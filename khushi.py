@@ -4,7 +4,7 @@ import pandas as pd
 
 # Create a sample dataset for experimental results
 data = {
-    'Experiment': ['Experiment 1', 'Experiment 1', 'Experiment 2', 'Experiment 2'],
+    
     'Current': [25 , 22.5 , 17 , 13 , 10.5],
     'Frequency': [100 , 500 , 1000 , 1500 , 2000]
 }
@@ -15,7 +15,7 @@ df = pd.DataFrame(data)
 st.title("Experimental Results")
 
 # Create a dropdown menu to select experiments
-experiments = ['Experiment 1', 'Experiment 2']
+experiments = ['Experiment 1']
 selected_experiment = st.selectbox("Select Experiment", experiments)
 
 # Filter the data based on the selected experiment
